@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Chege Gitiche</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="intro">
+        <div class="intro-text">
+            <h1>My name is <span class="highlight">Chege Gitiche</span></h1>
+            <p>I have a keen interest in creating user-friendly and scalable software solutions.</p>
+        </div>
+        <img src="profile.jpg" alt="Profile Picture">
+    </section>
+    
+    <section id="technologies">
+        <h2>Technologies</h2>
+        <div class="technologies">
+            <div class="tech-box"><img src="images/python.png" width="100" alt="Tech 1"></div>
+            <div class="tech-box"><img src="images/djs.png"  width="170"  alt="Tech 2"></div>
+            <div class="tech-box"><img src="images/js2.png" alt="Tech 3"></div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2 class="highlight">About me</h2>
+        <p>I am a 20-year-old 4th-year student at Strathmore University pursuing a Bachelor of Computer Science. During this time, I have picked up on skills such as basic networking, cybersecurity and threats, database modeling, and system administration.
+        I believe learning these skills has fostered me to be a better software engineer offering efficient and long-lasting solutions.</p>
+    </section>
+    
+    <section id="education">
+        <h2 class="highlight"><strong>EDUCATIONAL BACKGROUND</strong></h2>
+        <div class="education-entry">
+            <p><strong>2025 – PRESENT</strong></p>
+            <p><strong>Power Learn Project Africa</strong></p>
+            <p>Software engineering</p>
+        </div>
+        <br>
+        <div class="education-entry">
+            <p><strong>2022 – PRESENT</strong></p>
+            <p><strong>Strathmore University</strong></p>
+            <p>Bachelor of Informatics and Computer Science, 4<sup>th</sup> year</p>
+            <p><strong>Honors:</strong> First Class Honors</p>
+        </div>
+        <br>
+        <div class="education-entry">
+            <p><strong>2018 – 2022</strong></p>
+            <p><strong>Moi High School Kabarak</strong></p>
+            <p><strong>Honors:</strong> Grade A- (79)</p>
+        </div>
+    </section>
+    
+    <section id="interests">
+        <h2>Interests</h2>
+        <ul>
+            <li>Reading</li>
+            <li>Walking</li>
+            <li>Coding</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2 class="highlight">Projects</h2>
+        <div class="project">
+            <h3>Drug Dispensing Application</h3>
+            <p>This is a project that is meant to ease the process of obtaining prescribed drugs from the doctor to the patient 
+                through the Pharmacist. It also includes a pharmaceutical company that simplifies the process of obtaining the 
+            required drugs.</p>
+            <img src="images/image.png" class="project-image" alt="Project Image">
+
+            <h3>Bus Booking Application</h3>
+            <p>This is a project that is meant to ease the process of booking buses while being anywhere. Moreover, 
+                it offers a simple payment procedure to complete the process anywhere as well as a rating system to ensure
+                the drivers and buses are in good condition and respecting the safety rules.</p>
+            <img src="images/Screenshot 2024-07-17 202902.png" class="project-image" alt="Project Image">
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><span class="highlight">Phone:</span> +254114679087</p>
+        <p><span class="highlight">Email:</span> <a href="mailto:chegegitiche254@gmail.com">chegegitiche254@gmail.com</a></p>
+        <p><span class="highlight">LinkedIn:</span> Emmanuel Gitiche</p>
+    </section>
+    
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+    let header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+    </script>
+</body>
+</html>
