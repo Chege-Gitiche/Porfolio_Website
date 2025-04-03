@@ -172,3 +172,32 @@ ul {
     background-color: #f4f4f4;
     padding: 50px 10%;
 }
+
+/* Download CV Button */
+.download-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 12px;
+    width: 500px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: #f8f8f8; /* Off-white */
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:active {
+    transform: scale(0.95);
+}
+
