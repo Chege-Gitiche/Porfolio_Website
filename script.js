@@ -1,6 +1,28 @@
-setTimeout(() => {
-    window.location.href = "portfolio.html"; // Replace with your actual portfolio URL or file
-}, 1000);
+document.addEventListener("DOMContentLoaded", function () {
+    const greetings = ["Hello ...", "Niaje ...", "Sawubona ..."];
+    let index = 0;
+    const greetingElement = document.getElementById("greeting");
+    const transitionElement = document.getElementById("transition");
+
+    function changeGreeting() {
+        greetingElement.textContent = greetings[index]; // Set new text
+
+        if (index < greetings.length - 1) {
+            index++;
+            setTimeout(changeGreeting, 1000); // Change greeting every 2 seconds
+        } else {
+            setTimeout(() => {
+                transitionElement.style.transform = "translateY(0)"; // Trigger garage door effect
+                setTimeout(() => {
+                    window.location.href = "portfolio.html"; // Redirect after animation
+                }, 1500); // Matches CSS transition time
+            }, 2000);
+        }
+    }
+
+    setTimeout(changeGreeting, 2000);
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");

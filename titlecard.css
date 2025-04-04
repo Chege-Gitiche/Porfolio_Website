@@ -9,9 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f6f2; /* Off-white background */
-    color: #333; /* Black text */
-    font-family: 'Fira Mono', monospace; /* Monospace font */
+    background-color: #fff; /* Ensure a contrasting background */
+    font-family: 'Fira Mono', monospace;
+    color: #333;
+    margin: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .container {
@@ -21,8 +23,16 @@ body {
     animation: fadeOut 0.5s ease-in-out 0.5s forwards;
 }
 
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-    }
+#transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;  /* Adjust color if needed */
+    transform: translateY(100%);
+    transition: transform 1.5s ease-in-out;
+    z-index: 9999;
 }
+
+
